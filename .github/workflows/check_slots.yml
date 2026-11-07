@@ -1,0 +1,38 @@
+name: ID Austria Slot Tracker
+
+on:
+  schedule:
+    # Runs automatically every 10 minutes
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # Allows manual testing from GitHub UI
+
+jobs:
+  check-slots:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Tracker Script
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          NOTIFICATION_TO: ${{ secrets.NOTIFICATION_TO }}
+          USER_LASTNAME: ${{ secrets.USER_LASTNAME }}
+          USER_FIRSTNAME: ${{ secrets.USER_FIRSTNAME }}
+          USER_DOB: ${{ secrets.USER_DOB }}
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
+        run: |
+          python tracker.py
