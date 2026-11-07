@@ -8,7 +8,7 @@ As a non-Austrian resident living in Vienna, securing an ID Austria registration
 ## How It Works
 - **Automated Cloud Polling**: Runs on a 10-minute cron schedule via GitHub Actions entirely on free cloud infrastructure.
 - **Smart Filtering**: Simulates form submissions across all Vienna police precincts, parsing availability tables to look exclusively for slots within your 30-day window.
-- **Instant Direct Alerts**: Sends an encrypted email straight to your personal inbox the microsecond an early cancellation drops so you can beat everyone else to the booking link.
+- **Instant Direct Alerts**: Sends an encrypted email straight to your personal inbox the second an early cancellation drops so you can beat everyone else to the booking link.
 
 ## Setup Instructions
 
