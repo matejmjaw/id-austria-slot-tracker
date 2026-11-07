@@ -2,6 +2,9 @@
 
 An automated, serverless monitor that checks for open ID Austria registration slots across Vienna police stations and emails alerts immediately when an early cancellation is detected.
 
+## Why?
+As a non-Austrian resident living in Vienna, securing an ID Austria registration appointment through official channels often means facing months-long waiting lists or endless manual page refreshing. This tool automates the process entirely on free cloud infrastructure, scanning every 10 minutes to notify you the exact moment an early cancellation drops so you can secure a spot immediately.
+
 ## How It Works
 - **Automated Cloud Polling**: Runs on a 10-minute cron schedule via GitHub Actions entirely on free cloud infrastructure.
 - **Smart Filtering**: Simulates form submissions across all Vienna police precincts, parsing availability tables to look exclusively for slots within your 30-day window.
