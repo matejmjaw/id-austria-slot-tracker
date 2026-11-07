@@ -29,3 +29,7 @@ Add the following secrets under your repository **Settings > Secrets and variabl
 - `USER_LASTNAME`: `coyote` (dummy text for the form)
 - `USER_FIRSTNAME`: `wile-e` (dummy text for the form)
 - `USER_DOB`: `01.01.2000` (dummy text for the form)
+
+---
+
+*Disclaimer: This is not an official service of the Republic of Austria. All data is automatically retrieved from publicly accessible websites. No guarantee is given for the accuracy, completeness, or timeliness of the displayed appointments. Please verify availability on the respective official website before booking.*
